@@ -22,11 +22,6 @@ body {
   min-height: 200vh;
 }
 
-/* ── Hero placeholder ────────────────────────────────────── */
-.hero-placeholder {
-  height: 100vh;
-  background: linear-gradient(135deg, var(--navy) 0%, #0f2a6b 60%, #1a3a7a 100%);
-}
 
 /* ── Header ─────────────────────────────────────────────── */
 .site-header {
@@ -755,6 +750,100 @@ body {
   .cta-inner { flex-direction: column; align-items: flex-start; }
   .hero-content { padding: 0 24px; }
 }
+
+/*  FOOTER */
+  
+.footer {
+  background: #050d1a;
+  padding: 64px 0 0;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 64px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-logo {
+  display: block;
+  width: 120px;
+  height: 40px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.footer-desc {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.footer-col a {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover { color: var(--white); }
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.footer-copy {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-legal {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-legal a {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-legal a:hover { color: var(--white); }
+
+@media (max-width: 768px) {
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  .footer-links { grid-template-columns: repeat(2, 1fr); }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
+
 /* ── Overlay ─────────────────────────────────────────────── */
 .nav-overlay {
   display: none;
