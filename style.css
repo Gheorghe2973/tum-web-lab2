@@ -1,1 +1,22 @@
-/* add your CSS here */
+:root {
+  --navy:    #0a1628;
+  --navy2:   #112040;
+  --blue:    #1358d6;
+  --blue-lt: #2a72f8;
+  --accent:  #00c2ff;
+  --white:   #ffffff;
+  --gray:    #f4f6fb;
+  --text:    #1a2540;
+  --muted:   #6b7a99;
+  --border:  #e2e8f4;
+
+  --nav-h: 68px;
+
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--white);
+}
