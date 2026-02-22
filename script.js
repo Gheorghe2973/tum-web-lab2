@@ -56,3 +56,24 @@ mobileMenu.querySelectorAll('a').forEach(link => {
     mobileMenu.classList.remove('open');
   });
 });
+// Hero slider 
+const heroBg = document.querySelector('.hero-bg');
+const dots = document.querySelectorAll('.hero-dot');
+const images = ['assets/images/hero-1.jpg', 'assets/images/hero-2.jpg', 'assets/images/hero-3.jpg'];
+let current = 0;
+
+function goToSlide(index) {
+  heroBg.style.backgroundImage = `url('${images[index]}')`;
+  dots.forEach(d => d.classList.remove('active'));
+  dots[index].classList.add('active');
+  current = index;
+}
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => goToSlide(i));
+});
+
+// Auto-advance every 5 seconds
+setInterval(() => {
+  goToSlide((current + 1) % images.length);
+}, 5000);
