@@ -2,11 +2,43 @@
 const header = document.getElementById('siteHeader');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
+  header.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ── Dropdown ──────────────────────────────────────────────
+const overlay = document.getElementById('navOverlay');
+const productItem = document.getElementById('itemProducts');
+const productsToggle = document.getElementById('productsToggle');
+
+productsToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const isOpen = productItem.classList.contains('open');
+  productItem.classList.toggle('open', !isOpen);
+  overlay.classList.toggle('visible', !isOpen);
+});
+
+overlay.addEventListener('click', () => {
+  productItem.classList.remove('open');
+  overlay.classList.remove('visible');
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    productItem.classList.remove('open');
+    overlay.classList.remove('visible');
   }
+});
+
+// ── Sidebar tab switching ─────────────────────────────────
+document.querySelectorAll('.drop-tab').forEach(tab => {
+  tab.addEventListener('mouseenter', () => {
+    const panelId = tab.dataset.panel;
+    const dropdown = tab.closest('.dropdown');
+    dropdown.querySelectorAll('.drop-tab').forEach(t => t.classList.remove('active'));
+    dropdown.querySelectorAll('.drop-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    dropdown.querySelector(`#panel-${panelId}`).classList.add('active');
+  });
 });
 
 // ── Hamburger ─────────────────────────────────────────────
