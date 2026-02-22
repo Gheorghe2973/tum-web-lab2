@@ -40,9 +40,219 @@
     <a class="nav-logo" href="#"></a>
 
     <ul class="nav-links">
-      <li class="nav-item">
-        <a class="nav-link" href="#products">Products & Solutions</a>
+
+      <!-- Products & Solutions with dropdown -->
+      <li class="nav-item" id="itemProducts">
+        <span class="nav-link nav-link--dropdown" id="productsToggle">
+          Products & Solutions
+          <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <polyline points="4 6 8 10 12 6"/>
+          </svg>
+        </span>
+
+        <div class="dropdown" id="dropProducts">
+          <!-- Sidebar -->
+          <div class="drop-sidebar">
+            <div class="drop-tab active" data-panel="monitoring">
+              <span>Patient Monitoring</span>
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="2 7 4 5 6 9 8 6 10 7 12 7"/></svg>
+            </div>
+            <div class="drop-tab" data-panel="imaging">
+              <span>Medical Imaging</span>
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="7" cy="7" r="5"/><path d="M5 7h4M7 5v4"/></svg>
+            </div>
+            <div class="drop-tab" data-panel="ventilators">
+              <span>Ventilators</span>
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 9c0-4 8-4 8 0M6 3v3"/></svg>
+            </div>
+            <div class="drop-tab" data-panel="lab">
+              <span>Lab Diagnostics</span>
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 2v5l-2 4h8l-2-4V2"/></svg>
+            </div>
+            <div class="drop-tab" data-panel="infusion">
+              <span>Infusion Systems</span>
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 2v10M4 8h6"/></svg>
+            </div>
+          </div>
+
+          <!-- Panels -->
+          <div class="drop-panels">
+
+            <div class="drop-panel active" id="panel-monitoring">
+              <div class="drop-panel-title">Patient Monitoring</div>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="2 8 5 4 7 10 9 6 11 8 14 8"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">BeneVision N22 / N19</span>
+                  <span class="drop-item-desc">High-acuity bedside monitors</span>
+                </div>
+              </a>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="4" width="12" height="8" rx="2"/><path d="M5 8h6"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">BeneVision N17 / N15</span>
+                  <span class="drop-item-desc">Mid-acuity patient monitors</span>
+                </div>
+              </a>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="8" r="5"/><path d="M8 5v3l2 2"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">ePM™ Series</span>
+                  <span class="drop-item-desc">Step-down & general ward</span>
+                </div>
+              </a>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 10l3-6 3 8 2-4 2 2"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">Transport Monitors</span>
+                  <span class="drop-item-desc">Compact, battery-powered</span>
+                </div>
+              </a>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 8h8M8 4v8"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">Central Monitoring</span>
+                  <span class="drop-item-desc">BeneVision CMS network hub</span>
+                </div>
+              </a>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="8" r="3"/><path d="M8 2v2M8 12v2M2 8h2M12 8h2"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">Vital Signs PM-60</span>
+                  <span class="drop-item-desc">Primary care & spot-check</span>
+                </div>
+              </a>
+              <div class="drop-footer">
+                <a class="drop-footer-link" href="#">View all monitors →</a>
+                <a class="drop-footer-link" href="#">Compare models →</a>
+              </div>
+            </div>
+
+            <div class="drop-panel" id="panel-imaging">
+              <div class="drop-panel-title">Medical Imaging</div>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><ellipse cx="8" cy="8" rx="5" ry="3"/><path d="M3 8c0 2.8 2.2 5 5 5s5-2.2 5-5"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">Ultrasound Systems</span>
+                  <span class="drop-item-desc">General imaging & POC</span>
+                </div>
+              </a>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="10" height="10" rx="2"/><path d="M6 8h4M8 6v4"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">Digital X-Ray</span>
+                  <span class="drop-item-desc">Portable & fixed DR systems</span>
+                </div>
+              </a>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">Women's Health</span>
+                  <span class="drop-item-desc">OB/GYN dedicated imaging</span>
+                </div>
+              </a>
+              <div class="drop-footer">
+                <a class="drop-footer-link" href="#">All imaging products →</a>
+              </div>
+            </div>
+
+            <div class="drop-panel" id="panel-ventilators">
+              <div class="drop-panel-title">Ventilators</div>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12c0-4.4 8-4.4 8 0M8 4v4"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">SV800 / SV600</span>
+                  <span class="drop-item-desc">ICU high-end ventilation</span>
+                </div>
+              </a>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 8h12M8 4v8"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">SV300</span>
+                  <span class="drop-item-desc">Mid-range ICU ventilator</span>
+                </div>
+              </a>
+              <div class="drop-footer">
+                <a class="drop-footer-link" href="#">All ventilators →</a>
+              </div>
+            </div>
+
+            <div class="drop-panel" id="panel-lab">
+              <div class="drop-panel-title">Lab Diagnostics</div>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 2v5L3 12h10l-3-5V2"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">Hematology Analyzers</span>
+                  <span class="drop-item-desc">5-part diff CBC analysis</span>
+                </div>
+              </a>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="8" r="4"/><path d="M8 5v3l2 2"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">Chemistry Analyzers</span>
+                  <span class="drop-item-desc">Biochemistry & immunoassay</span>
+                </div>
+              </a>
+              <div class="drop-footer">
+                <a class="drop-footer-link" href="#">All lab products →</a>
+              </div>
+            </div>
+
+            <div class="drop-panel" id="panel-infusion">
+              <div class="drop-panel-title">Infusion Systems</div>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 2v12M5 6h6"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">BeneFusion n Series</span>
+                  <span class="drop-item-desc">Smart infusion workstation</span>
+                </div>
+              </a>
+              <a class="drop-item" href="#">
+                <div class="drop-item-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="4" width="8" height="8" rx="2"/></svg>
+                </div>
+                <div class="drop-item-body">
+                  <span class="drop-item-name">BeneFusion e Series</span>
+                  <span class="drop-item-desc">Syringe & volumetric pumps</span>
+                </div>
+              </a>
+              <div class="drop-footer">
+                <a class="drop-footer-link" href="#">All infusion products →</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </li>
+
       <li class="nav-item">
         <a class="nav-link" href="#services">Services</a>
       </li>
@@ -67,6 +277,9 @@
     </div>
 
   </nav>
+
+  <!-- Backdrop -->
+  <div class="nav-overlay" id="navOverlay"></div>
 
   <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu">
