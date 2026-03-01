@@ -131,7 +131,16 @@ body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(-
   25% { transform: rotate(-10deg); }
   75% { transform: rotate(10deg); }
 }
-
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: var(--blue);
+  z-index: 99999;
+  width: 0%;
+  display: none;
+}
 /* ── Media queries — always last ─────────────────────────── */
 @media (max-width: 768px) {
   .mobile-menu { display: flex; }
@@ -145,5 +154,19 @@ body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(-
   .hero-dots {
     left: 35%;
     transform: none;
+  }
+  #scroll-progress {
+    display: block;
+    animation: scroll-progress-animation auto linear;
+    animation-timeline: scroll(root block);
+  }
+
+  @keyframes scroll-progress-animation {
+    from { width: 0%; }
+    to { width: 100%; }
+  }
+
+  .cta-mobile-label {
+    display: block;
   }
 }
