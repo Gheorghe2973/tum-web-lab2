@@ -77,7 +77,3 @@ dots.forEach((dot, i) => {
 setInterval(() => {
   goToSlide((current + 1) % images.length);
 }, 5000);
-// ── Mascot ────────────────────────────────────────────────
-setTimeout(() => {
-  document.getElementById('mascot').classList.add('visible');
-}, 2500);
