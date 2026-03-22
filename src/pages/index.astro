@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- Hero placeholder -->
+  <section class="hero relative flex items-center h-screen min-h-[600px] overflow-hidden" id="hero">
+    <div class="hero-bg absolute inset-0" style="background:url('/images/hero-1.jpg') center/cover no-repeat"></div>
+    <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(5,15,35,0.75) 40%,rgba(5,15,35,0.1) 100%)"></div>
+    <div class="hero-content relative z-10 px-20 max-w-[640px] max-[768px]:px-6">
+      <h1 class="font-syne text-[clamp(2rem,4vw,3.25rem)] font-extrabold text-white leading-[1.15] tracking-tight mb-5">
+        Advanced Technologies<br>in Healthcare
+      </h1>
+      <p class="text-base text-white/80 leading-relaxed mb-9">
+        Solving the challenges of medical diagnostics<br>with innovative equipment solutions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Products placeholder -->
+  <section class="py-20 bg-white" id="products">
+    <div class="max-w-[1200px] mx-auto px-10 max-[768px]:px-5">
+      <h2 class="font-syne text-[clamp(1.5rem,3vw,2rem)] font-bold text-text-primary mb-3">
+        Products & Solutions
+      </h2>
+      <p class="text-[15px] text-muted max-w-[480px] leading-relaxed mb-5">
+        Explore our portfolio of medical equipment designed to unlock the potential of healthcare.
+      </p>
+      <div class="w-12 h-[3px] bg-blue rounded-sm"></div>
+    </div>
+  </section>
+</Layout>
