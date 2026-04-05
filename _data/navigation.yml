@@ -1,0 +1,28 @@
+topbar:
+  - label: Media Center
+    url: "#"
+  - label: Contact Us
+    url: "#contact"
+
+main:
+  - label: Products & Solutions
+    url: "#products"
+    dropdown: true
+  - label: Services
+    url: "#services"
+  - label: Career
+    url: "#career"
+  - label: About Us
+    url: "#about"
+
+dropdown_categories:
+  - id: monitoring
+    label: Patient Monitoring
+  - id: imaging
+    label: Medical Imaging
+  - id: ventilators
+    label: Ventilators
+  - id: lab
+    label: Lab Diagnostics
+  - id: infusion
+    label: Infusion Systems
