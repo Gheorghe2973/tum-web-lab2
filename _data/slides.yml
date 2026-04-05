@@ -1,0 +1,17 @@
+- image: assets/images/hero-1.jpg
+  title: Advanced Technologies<br>in Healthcare
+  subtitle: Solving the challenges of medical diagnostics<br>with innovative equipment solutions.
+  cta_label: Contact Us
+  cta_url: "#contact"
+
+- image: assets/images/hero-2.jpg
+  title: Precision Equipment<br>for Better Outcomes
+  subtitle: State-of-the-art medical devices trusted<br>by healthcare professionals worldwide.
+  cta_label: View Products
+  cta_url: "#products"
+
+- image: assets/images/hero-3.jpg
+  title: Innovative Solutions<br>for Modern Healthcare
+  subtitle: Empowering clinicians with cutting-edge<br>diagnostic and monitoring technology.
+  cta_label: Learn More
+  cta_url: "#about"
