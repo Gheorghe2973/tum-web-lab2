@@ -56,17 +56,17 @@ mobileMenu.querySelectorAll('a').forEach(link => {
     mobileMenu.classList.remove('open');
   });
 });
-// Hero slider 
-const heroBg = document.querySelector('.hero-bg');
+// Hero slider
+const slides = document.querySelectorAll('.hero-slide');
 const dots = document.querySelectorAll('.hero-dot');
-const images = ['assets/images/hero-1.jpg', 'assets/images/hero-2.jpg', 'assets/images/hero-3.jpg'];
 let current = 0;
 
 function goToSlide(index) {
-  heroBg.style.backgroundImage = `url('${images[index]}')`;
-  dots.forEach(d => d.classList.remove('active'));
-  dots[index].classList.add('active');
+  slides[current].classList.add('hidden');
+  dots[current].classList.remove('active');
   current = index;
+  slides[current].classList.remove('hidden');
+  dots[current].classList.add('active');
 }
 
 dots.forEach((dot, i) => {
@@ -75,5 +75,5 @@ dots.forEach((dot, i) => {
 
 // Auto-advance every 5 seconds
 setInterval(() => {
-  goToSlide((current + 1) % images.length);
+  goToSlide((current + 1) % slides.length);
 }, 5000);

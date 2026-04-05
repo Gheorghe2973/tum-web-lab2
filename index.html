@@ -3,23 +3,7 @@ title: MedCore
 layout: default
 ---
 
-<section class="hero relative flex items-center h-screen min-h-[600px] overflow-hidden" id="hero">
-  <div class="hero-bg absolute inset-0" style="background:url('assets/images/hero-1.jpg') center/cover no-repeat"></div>
-  <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(5,15,35,0.75) 40%,rgba(5,15,35,0.1) 100%)"></div>
-  <div class="hero-content relative z-10 px-20 max-w-[640px] max-[768px]:px-6">
-    <h1 class="font-['Syne'] text-[clamp(2rem,4vw,3.25rem)] font-extrabold text-white leading-[1.15] tracking-tight mb-5">Advanced Technologies<br>in Healthcare</h1>
-    <p class="text-base text-white/80 leading-relaxed mb-9">Solving the challenges of medical diagnostics<br>with innovative equipment solutions.</p>
-    <a class="inline-flex items-center gap-2 px-7 py-3 bg-transparent border border-white/70 text-white text-[0.9rem] font-medium rounded no-underline transition-colors hover:bg-white/15 hover:border-white" href="#contact">
-      Contact Us
-      <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="8" x2="13" y2="8"/><polyline points="9 4 13 8 9 12"/></svg>
-    </a>
-  </div>
-  <div class="hero-dots absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-[10px] z-10">
-    <button class="hero-dot w-8 h-[3px] bg-white/35 border-none rounded-sm cursor-pointer transition-colors"></button>
-    <button class="hero-dot w-8 h-[3px] bg-white/35 border-none rounded-sm cursor-pointer transition-colors"></button>
-    <button class="hero-dot w-8 h-[3px] bg-white/35 border-none rounded-sm cursor-pointer transition-colors"></button>
-  </div>
-</section>
+{% include hero.html %}
 
 <!-- ── PRODUCTS ──────────────────────────────────────────── -->
 <section class="py-20 bg-white" id="products">
