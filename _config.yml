@@ -1,0 +1,25 @@
+title: MedCore
+description: Medical equipment solutions
+url: ""
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Collections
+collections:
+  products:
+    output: false
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - "*.sh"
