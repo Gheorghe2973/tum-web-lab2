@@ -1,0 +1,23 @@
+<section class="py-20 bg-white" id="products">
+  <div class="max-w-[1200px] mx-auto px-10 max-[768px]:px-5">
+    <div class="mb-12">
+      <h2 class="font-['Syne'] text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#1a2540] mb-3">Products & Solutions</h2>
+      <p class="text-[15px] text-[#6b7a99] max-w-[480px] leading-relaxed mb-5">Explore our portfolio of medical equipment designed to unlock the potential of healthcare.</p>
+      <div class="w-12 h-[3px] bg-[#1358d6] rounded-sm"></div>
+    </div>
+    <div class="grid grid-cols-3 gap-6 max-[768px]:grid-cols-1">
+      {% assign sorted_products = site.products | sort: "order" %}
+      {% for product in sorted_products %}
+      <a class="product-card bg-white border border-[#e2e8f4] rounded-lg overflow-hidden no-underline" href="#">
+        <div class="bg-[#f4f6fb] h-[220px] flex items-center justify-center">
+          <img src="{{ product.image | relative_url }}" alt="{{ product.name }}" class="w-full h-full object-contain p-5" />
+        </div>
+        <div class="p-5 px-6">
+          <h3 class="font-['Syne'] text-[1.1rem] font-bold text-[#1a2540] mb-1">{{ product.name }}</h3>
+          <p class="text-[14px] text-[#6b7a99] leading-relaxed">{{ product.description }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
