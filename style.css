@@ -20,3 +20,55 @@ body {
   color: var(--text);
   background: var(--white);
 }
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+  background: white;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.navbar {
+  height: var(--nav-h);
+}
+
+.logo-med {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.site-header.scrolled .logo-med {
+  color: #0a1628 !important;
+}
+
+.site-header.scrolled .nav-link,
+.site-header.scrolled .header-topbar a,
+.site-header.scrolled .topbar-region {
+  color: #1a2540 !important;
+}
+
+.site-header.scrolled .nav-search-input {
+  color: #1a2540;
+}
+
+.site-header.scrolled .nav-search {
+  border-color: #1a254040;
+}
+
+#scroll-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.1s linear;
+}

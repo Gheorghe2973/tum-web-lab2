@@ -1,6 +1,6 @@
 <section class="hero relative flex items-center h-screen min-h-[600px] overflow-hidden" id="hero">
   {% for slide in site.data.slides %}
-  <div class="hero-slide absolute inset-0 {% unless forloop.first %}hidden{% endunless %}" data-index="{{ forloop.index0 }}">
+  <div class="hero-slide absolute inset-0 flex items-center {% unless forloop.first %}hidden{% endunless %}" data-index="{{ forloop.index0 }}">
     <div class="hero-bg absolute inset-0" style="background:url('{{ slide.image }}') center/cover no-repeat"></div>
     <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(5,15,35,0.75) 40%,rgba(5,15,35,0.1) 100%)"></div>
     <div class="hero-content relative z-10 px-20 max-w-[640px] max-[768px]:px-6">
