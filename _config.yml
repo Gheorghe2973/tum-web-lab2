@@ -1,7 +1,7 @@
 title: MedCore
 description: Medical equipment solutions
-url: ""
-baseurl: ""
+url: "https://gheorghe2973.github.io"
+baseurl: "/tum-web-lab2"
 
 # Build settings
 markdown: kramdown
